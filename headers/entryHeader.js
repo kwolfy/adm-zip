@@ -98,6 +98,7 @@ module.exports = function () {
             return Utils.fromDOS2Date(this.timeval);
         },
         set time(val) {
+            val = new Date(val);
             this.timeval = Utils.fromDate2DOS(val);
         },
 
